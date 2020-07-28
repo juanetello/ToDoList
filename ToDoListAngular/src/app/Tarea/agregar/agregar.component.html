@@ -1,0 +1,24 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar tarea</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="descripcion">
+            Descripción tarea:
+          </label>
+          <textarea #descripcion class="form-control" name="descripcion" id="descripcion" cols="40" rows="8"
+            maxlength="2048" placeholder="Ingrese descripción de la tarea."></textarea>
+
+
+        </div>
+
+        <button (click)="Guardar(descripcion.value)" class="btn btn-danger">
+          Agregar tarea
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
