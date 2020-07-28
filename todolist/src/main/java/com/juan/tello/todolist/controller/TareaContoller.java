@@ -33,11 +33,6 @@ public class TareaContoller {
 		return tareaService.add(tarea);
 	}
 	
-	@GetMapping(path = {"/{id"})
-	public Tarea listarById (@PathVariable("id") String id) {
-		return tareaService.listarId(id);
-	}
-	
 	@DeleteMapping(path = {"/{id}"})
 	public Tarea delete(@PathVariable("id") String id) {
 		return tareaService.delete(id);
