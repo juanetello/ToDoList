@@ -200,9 +200,9 @@
 <div class="toolbar" role="banner">
   <img width="40" alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
-  <span>Bienvenidos!!</span>
+  <span>Bienvenidos a {{title}}!!</span>
   <div class="spacer"></div>
-  <a aria-label="Juan Tello on Github" target="_blank" rel="noopener" href="https://github.com/juanetello"
+  <a aria-label="Juan Tello on Github"  target="_blank" rel="noopener" href="https://github.com/juanetello/ToDoList"
     title="Github">
 
     <img src="https://img.icons8.com/material-rounded/96/000000/github.png" style="height: 50px; width: 50px;" />
@@ -213,13 +213,26 @@
 
 <div class="content" role="main">
 
-  <div class="container col-md-6" style="margin-top: 28px;">
-    <button (click)="Listar()" class="btn btn-info">Listar tareas</button>
-    <button (click)="Nuevo()" class="btn btn-info" style="margin-left: 4px;">Nueva tarea</button>
+  <!-- Tarea -->
+  <h3>Nueva tarea</h3>
 
+  <div class="container col-md-8">
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="descripcion">
+            Descripción tarea:
+          </label>
+          <textarea #descripcion class="form-control" name="descripcion" id="descripcion" cols="60" rows="8"
+            maxlength="2048" placeholder="Ingrese aquí la descripción de la tarea."></textarea>
+        </div>
+        <input (click)="Guardar(descripcion.value)" class="btn btn-danger" type="reset" value="Agregar tarea">
+        <button (click)="Listar()" class="btn btn-info" style="margin-left: 10px;">
+          Listar tareas
+        </button>
+      </form>
+    </div>
   </div>
-
-
 
   <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677"
     viewBox="0 0 2611.084 485.677">

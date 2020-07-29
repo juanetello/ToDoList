@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListarComponent } from './Tarea/listar/listar.component';
-import { AgregarComponent } from './Tarea/agregar/agregar.component';
 
 
 const routes: Routes = [
-  {path:'listar', component:ListarComponent},
-  {path:'agregar', component:AgregarComponent}
+  {path:'listar', component:ListarComponent}
 ];
 
 @NgModule({

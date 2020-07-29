@@ -30,6 +30,7 @@ public class TareaContoller {
 	
 	@PostMapping
 	public Tarea agregar(@RequestBody Tarea tarea) throws Exception {
+		System.out.println("La descripcion de la tareea es: --> " + tarea.getDescripcion());
 		return tareaService.add(tarea);
 	}
 	
